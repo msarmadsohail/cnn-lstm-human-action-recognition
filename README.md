@@ -1,119 +1,103 @@
-# Human Action Recognition using CNN + LSTM  
-*SEECS NUST – Deep Learning Internship Project*  
+# Human Action Recognition using CNN-LSTM
 
-This repository contains the work completed during my **CNN Internship at SEECS, NUST**, focused on building deep learning models for **Human Action Recognition (HAR)** from video sequences.  
-The project explores multiple deep architectures including **ConvLSTM** and **LRCN (Long-term Recurrent Convolutional Network)** using the **UBFC dataset**.  
+[![Python](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-1.x-red.svg)](https://pytorch.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
----
+## 🎯 Project Overview
 
-## Project Objective  
-To build and evaluate deep learning architectures for **classifying human actions from video** using frame sequences, achieving robust temporal understanding and generalization.
+Deep learning models for **Human Action Recognition (HAR)** from video sequences using the **UBFC dataset**.
 
-The project focuses on:
+**Developed during:** CNN Internship at SEECS, NUST (Jun - Aug 2023)
 
-- Video preprocessing & frame extraction  
-- CNN-based spatial feature learning  
-- LSTM/ConvLSTM-based temporal modeling  
-- Performance comparison between models  
+This project explores multiple deep architectures including **ConvLSTM** and **LRCN (Long-term Recurrent Convolutional Network)** for temporal video understanding.
 
 ---
 
-## Dataset: UBFC Video Dataset  
+## 📋 Objectives
 
-The project uses the **UBFC** dataset, containing video samples labeled with different human actions.  
-Each video is decomposed into frames and processed as a sequence for temporal deep learning models.
-
----
-
-# Approaches Implemented  
-
-The `Human_Action_Recogntion_using_CNN_+_LSTM.ipynb.ipynb` contains the complete workflow, organized in the following steps:
+- Video preprocessing & frame extraction
+- CNN-based spatial feature learning
+- LSTM/ConvLSTM-based temporal modeling
+- Performance comparison between architectures
 
 ---
 
-## **Step 1 — Visualizing Data & Labels**  
-Sample video frames were extracted and plotted to understand action categories and dataset quality.
+## 📊 Dataset
+
+**UBFC Video Dataset** - Labeled human action video samples decomposed into frame sequences for temporal deep learning models.
 
 ---
 
-## **Step 2 — Dataset Preprocessing**
+## 🏗️ Architectures Implemented
 
-- Frame extraction  
-- Resizing & normalization  
-- Sequence generation  
-- Label encoding  
-- Data augmentation (when applicable)
-
----
-
-## **Step 3 — Train/Test Split**  
-Data was split ensuring balanced representation of all action categories.
-
----
-
-# **Deep Learning Architectures**
-
-## **Step 4 — ConvLSTM Approach**
-
-### **4.1 — Construct Model**
-A hybrid network combining:  
-- Convolutional layers for spatial feature extraction  
-- LSTM layers for temporal sequence learning  
+### **1. ConvLSTM**
+Hybrid network combining:
+- Convolutional layers for spatial feature extraction
+- LSTM layers for temporal sequence learning
 - Dense layers for classification
 
-### **4.2 — Compile & Train**  
-Model trained on sequences with appropriate loss, optimizer, and metrics.
-
-### **4.3 — Loss & Accuracy Curves**  
-Plotting training & validation curves to evaluate convergence and overfitting.
-
----
-
-## **Step 5 — LRCN (Long-term Recurrent Convolutional Network)**
-
-### **5.1 — Construct Model**
-Uses:  
-- A CNN (per-frame feature extractor)  
-- Followed by LSTMs to learn temporal evolution  
-- Fully-connected layers for classification  
-
-### **5.2 — Compile & Train**  
-Comparative analysis with ConvLSTM.
-
-### **5.3 — Loss & Accuracy Curves**  
-Used for selecting the best-performing architecture.
+### **2. LRCN (Long-term Recurrent Convolutional Network)**
+- CNN per-frame feature extractor
+- LSTM layers for temporal evolution
+- Fully-connected layers for classification
 
 ---
 
-# **Step 6 — Testing on YouTube Videos**
-
-The best model was evaluated on real-world YouTube videos (after preprocessing):
-
-- Frame extraction  
-- Sequence generation  
-- Action prediction  
-
-This demonstrates model generalization beyond the UBFC dataset.
-
----
-
-# Results Summary  
-(Detailed plots inside notebooks)
-
-- Both ConvLSTM and LRCN successfully learned temporal patterns  
-- LRCN generally showed smoother convergence due to decoupled CNN extraction  
-- The best model showed strong performance on both test data and YouTube videos  
-- Action classes with higher motion variation performed better  
-
----
-
-# Author
-
-**Muhammad Sarmad Sohail**
-Data Engineer | Machine Learning Engineer  
-SEECS NUST – CNN Internship  
-
-GitHub: [https://github.com/msarmadsohail](https://github.com/msarmadsohail)  
-LinkedIn: [https://linkedin.com/in/msarmadsohail](https://linkedin.com/in/msarmadsohail)  
+## 📁 Repository Structure
 
 ```
+├── exploratory_notebooks/        # Initial data exploration
+├── implementation_1/             # First architecture attempt
+├── implementation_2/             # Improved model + training logs
+├── implementation_3/             # Final optimizations
+├── Human_Action_Recognition_using_CNN_+_LSTM.ipynb  # Complete workflow
+├── LICENSE
+└── README.md
+```
+
+---
+
+## 🚀 Workflow
+
+**Step 1:** Visualizing Data & Labels  
+**Step 2:** Dataset Preprocessing (frame extraction, resizing, augmentation)  
+**Step 3:** Train/Test Split  
+**Step 4:** ConvLSTM Model (construct, train, evaluate)  
+**Step 5:** LRCN Model (construct, train, compare)  
+**Step 6:** Testing on YouTube Videos (real-world generalization)
+
+---
+
+## 📊 Results Summary
+
+✅ Both ConvLSTM and LRCN successfully learned temporal patterns  
+✅ LRCN showed smoother convergence (decoupled CNN extraction)  
+✅ Strong performance on test data and YouTube videos  
+✅ Action classes with higher motion variation performed better
+
+---
+
+## 🛠️ Tech Stack
+
+- **Language:** Python 3.8+
+- **Frameworks:** PyTorch, Keras, TensorFlow
+- **Libraries:** NumPy, Matplotlib, OpenCV
+- **Dataset:** UBFC (Human Action Recognition)
+
+---
+
+## 👨‍💻 Author
+
+**Muhammad Sarmad Sohail**  
+Data Engineer | Machine Learning Engineer  
+Research Intern | SEECS, NUST
+
+msarmadsohail@gmail.com  
+[LinkedIn](https://linkedin.com/in/msarmadsohail) | [GitHub](https://github.com/msarmadsohail) | [Portfolio](https://msarmadsohail.github.io)
+
+---
+
+## 📝 License
+
+MIT License - see [LICENSE](LICENSE) file
